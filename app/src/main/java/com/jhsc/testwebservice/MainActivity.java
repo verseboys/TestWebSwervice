@@ -1,19 +1,18 @@
 package com.jhsc.testwebservice;
 
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import org.ksoap2.serialization.SoapObject;
-import org.ksoap2.serialization.SoapSerializationEnvelope;
-import org.ksoap2.transport.HttpTransportSE;
-
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
 
 
 /**
@@ -68,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
      * @param phoneSec 手机号段
      */
     public String getRemoteInfo(String phoneSec) throws Exception{
-        String WSDL_URI = "http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx?WSDL";//wsdl 的uri
+      //  http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx?WSDL
+       // String WSDL_URI = "http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx?WSDL";//wsdl 的uri
+        String WSDL_URI = "http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx?WSDL";//wsdl 的uri
         String namespace = "http://WebXml.com.cn/";//namespace
         String methodName = "getMobileCodeInfo";//要调用的方法名称
 
